@@ -70,7 +70,14 @@ const formatLanguageValue = ({ display_format, lang }) => {
  * @returns {string} The compact layout language SVG node.
  */
 const createCompactLangNode = ({ lang, x, y, display_format }) => {
-  const langName = lang.name.toLowerCase() === "terraform" ? "HCL" : lang.name;
+  const langName =
+    lang.name.toLowerCase() === "terraform"
+      ? "HCL"
+      : lang.name.toLowerCase() === "docker"
+        ? "Dockerfile"
+        : lang.name.toLowerCase() === "bash"
+          ? "Shell"
+          : lang.name;
   // @ts-ignore
   const color = languageColors[langName] || "#858585";
   const value = formatLanguageValue({ display_format, lang });
@@ -334,7 +341,13 @@ const renderWakatimeCard = (stats = {}, options = { hide: [] }) => {
           100;
 
         const languageName =
-          language.name.toLowerCase() === "terraform" ? "HCL" : language.name;
+          language.name.toLowerCase() === "terraform"
+            ? "HCL"
+            : language.name.toLowerCase() === "docker"
+              ? "Dockerfile"
+              : language.name.toLowerCase() === "bash"
+                ? "Shell"
+                : language.name;
         // @ts-ignore
         const languageColor = languageColors[languageName] || "#858585";
 

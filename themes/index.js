@@ -113,6 +113,13 @@ export const themes = {
     bg_color: "00000000",
     border_color: "44475a",
   },
+    dracula_light: {
+    title_color: "6c47ff",
+    icon_color: "007acc",
+    text_color: "333333",
+    bg_color: "00000000",
+    border_color: "cccccc",
+  },
   dracula_balanced: {
     bg_color: "282a36",
     title_color: "ff79c6",

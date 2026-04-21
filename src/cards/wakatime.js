@@ -333,7 +333,8 @@ const renderWakatimeCard = (stats = {}, options = { hide: [] }) => {
           ((width - COMPACT_LAYOUT_PROGRESSBAR_PADDING) * language.percent) /
           100;
 
-        const languageName = language.name === "Terraform" ? "HCL" : language.name;
+        const languageName =
+          language.name === "Terraform" ? "HCL" : language.name;
         // @ts-ignore
         const languageColor = languageColors[languageName] || "#858585";
 

@@ -79,8 +79,7 @@ const createCompactLangNode = ({ lang, x, y, display_format }) => {
           ? "Shell"
           : lang.name;
   // @ts-ignore
-  // const color = languageColors[langName] || "#858585";
-  const color = languageColors[langName] || "#000000";
+  const color = languageColors[langName] || "#858585";
   const value = formatLanguageValue({ display_format, lang });
 
   return `
@@ -350,8 +349,7 @@ const renderWakatimeCard = (stats = {}, options = { hide: [] }) => {
                 ? "Shell"
                 : language.name;
         // @ts-ignore
-        // const languageColor = languageColors[languageName] || "#858585";
-        const languageColor = languageColors[languageName] || "#000000";
+        const languageColor = languageColors[languageName] || "#858585";
 
         const output = `
           <rect
